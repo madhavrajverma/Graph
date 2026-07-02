@@ -1,8 +1,5 @@
 # SSSP with BFS — Unweighted Graphs & 0/1-Weighted Graphs
 
-*Based on Competitive Programming 4 (CP4) by Steven Halim, Section 4.4.2*
-
----
 
 ## Part 1: BFS on Unweighted Graphs
 
