@@ -19,6 +19,7 @@ vector<int> dijkstraOriginal(int V, vector<vector<pair<int,int>>>& adj, int sour
         for (auto& [w,v] : adj[u]) {
             if (dist[u] + w >= dist[v]) continue;   // not an improvement
             pq.erase({dist[v], v});                 // remove stale entry
+           // pq.erase(pq.find({dist[v], v})); 
             dist[v] = dist[u] + w;                  // relax
             pq.insert({dist[v], v});                // insert updated entry
         }

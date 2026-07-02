@@ -57,7 +57,6 @@ int dr[] = {-1,1,0,0};
 int dc[] = {0,0,-1,1};
 
 // it is also multi source so insert all A's
-
 for(int r = 0 ; r < R; r++) {
     for(int c = 0 ;c< C; c++) {
         if(grid[r][c] == 'A') {

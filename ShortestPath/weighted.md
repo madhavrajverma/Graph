@@ -387,10 +387,10 @@ True complexity is hard to analyze in general — runs in `O(k·E)` where `k` de
 
 | Algorithm | Complexity | Handles negative edges? | Handles negative cycles? |
 |---|---|---|---|
-| Original Dijkstra's (`set`) | `O((V+E) log V)` | ❌ Undefined behavior | ❌ |
-| Modified Dijkstra's (`priority_queue` + lazy deletion) | `O((V+E) log V)` on non-negative; can degrade to **exponential** on adversarial negative-weight graphs | ✅ (slower, no negative cycle) | ❌ Infinite loop |
-| Bellman-Ford | `O(V·E)` (or `O(V³)` with adjacency matrix) | ✅ | ✅ (detects them) |
-| Bellman-Ford-Moore (SPFA) | `O(k·E)`, worst case `O(V·E)` | ✅ | Can be modified to detect |
+| Original Dijkstra's (`set`) | `O((V+E) log V)` |  Undefined behavior |  |
+| Modified Dijkstra's (`priority_queue` + lazy deletion) | `O((V+E) log V)` on non-negative; can degrade to **exponential** on adversarial negative-weight graphs |  (slower, no negative cycle) |  Infinite loop |
+| Bellman-Ford | `O(V·E)` (or `O(V³)` with adjacency matrix) |  |  (detects them) |
+| Bellman-Ford-Moore (SPFA) | `O(k·E)`, worst case `O(V·E)` |  | Can be modified to detect |
 
 ---
 
