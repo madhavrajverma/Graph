@@ -747,10 +747,10 @@ struct DSUWithRollback {
 
 **1. Forgetting path compression in find**
 ```cpp
-// ❌ Wrong — no compression
+//  Wrong — no compression
 int find(int x) { return parent[x] == x ? x : find(parent[x]); }
 
-// ✅ Correct
+//  Correct
 int find(int x) {
     if (parent[x] != x) parent[x] = find(parent[x]);
     return parent[x];
@@ -759,23 +759,23 @@ int find(int x) {
 
 **2. Updating size/rank on the wrong node**
 ```cpp
-// ❌ Wrong — updating the node being attached
+//  Wrong — updating the node being attached
 parent[rb] = ra;
 sz[rb] += sz[ra];  // rb is no longer a root!
 
-// ✅ Correct — update the new root
+//  Correct — update the new root
 parent[rb] = ra;
 sz[ra] += sz[rb];
 ```
 
 **3. Not checking if find(a) == find(b) before uniting**
 ```cpp
-// ❌ Causes incorrect rank/size updates on self-union
+//  Causes incorrect rank/size updates on self-union
 void unite(int a, int b) {
     parent[find(a)] = find(b);
 }
 
-// ✅ Correct
+// Correct
 void unite(int a, int b) {
     a = find(a); b = find(b);
     if (a == b) return;   // ← MUST check!
@@ -788,10 +788,10 @@ void unite(int a, int b) {
 
 **5. Querying size on a non-root node**
 ```cpp
-// ❌ Wrong — sz[x] is only meaningful for root x
+// Wrong — sz[x] is only meaningful for root x
 int compSize = sz[x];
 
-// ✅ Correct
+// Correct
 int compSize = sz[find(x)];
 ```
 
