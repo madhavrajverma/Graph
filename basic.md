@@ -1,10 +1,5 @@
 # Graph Traversal — Complete Notes
 
-*Based on Competitive Programming 4 (CP4) by Steven Halim, Sections 4.1 & 4.2*
-*(Code rewritten in plain, standard C++ — no book macros like `vi`, `vii`, `AL`)*
-
----
-
 ## Table of Contents
 
 1. [Chapter Overview](#1-chapter-overview)
