@@ -4,6 +4,15 @@
 
 The goal of this README isn't to give you 200 random problems — it's to teach you **10-12 recurring patterns**. Once you can recognize which pattern a problem is wearing as a disguise, the actual coding becomes mechanical. Interview graph questions are graph modeling questions first, and algorithm-execution questions second.
 
+
+| Node Type         | Adjacency Structure                                  | Example           |
+| ----------------- | ----------------------------------------------------- | ----------------- |
+| `int`             | `vector<vector<int>>`                                | Course Schedule   |
+| `char`            | `unordered_map<char, vector<char>>`                  | Alien Dictionary  |
+| `string`          | `unordered_map<string, vector<string>>`              | Word Ladder       |
+| `pair<int,int>`   | `map<pair<int,int>, vector<pair<int,int>>>`          | Coordinate Graph  |
+| `string` + weight | `unordered_map<string, vector<pair<string,double>>>` | Evaluate Division |
+ 
 ---
 
 ## How to Use This
@@ -71,7 +80,9 @@ For each pattern:
 | 2 | Max Area of Island | Flood fill + size tracking |
 | 3 | Island Perimeter | Flood fill variant, counts boundary edges |
 | 4 | Number of Islands II | Flood fill + Union-Find (dynamic connectivity) |
-| 5 | Surrounded Regions | Flood fill from border inward (reverse thinking) |
+| 5 | Surrounded Regions | Flood fill from border inward (reverse thinking) | this is the important pattern reverse thinkin 
+-  Number of Enclaves 
+
 | 6 | Pacific Atlantic Water Flow | Flood fill from **two** sets of sources, then intersect |
 | 7 | Making A Large Island | Flood fill + component-size memoization, then try flipping each `0` |
 | 8 | Count Sub Islands | Flood fill with a validity constraint |
