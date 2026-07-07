@@ -6,9 +6,9 @@ The goal of this README isn't to give you 200 random problems — it's to teach 
 
 
 | Node Type         | Adjacency Structure                                  | Example           |
-| ----------------- | ----------------------------------------------------- | ----------------- |
+| ----------------- | -----------------------------------------------------| ----------------- |
 | `int`             | `vector<vector<int>>`                                | Course Schedule   |
-| `char`            | `unordered_map<char, vector<char>>`                  | Alien Dictionary  |
+| `char`            | `unordered_map<char, vector<char>>` // unordered_set | Alien Dictionary  |
 | `string`          | `unordered_map<string, vector<string>>`              | Word Ladder       |
 | `pair<int,int>`   | `map<pair<int,int>, vector<pair<int,int>>>`          | Coordinate Graph  |
 | `string` + weight | `unordered_map<string, vector<pair<string,double>>>` | Evaluate Division |
