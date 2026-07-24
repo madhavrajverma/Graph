@@ -208,6 +208,7 @@ For each pattern:
 | 6 | Triangle | Grid DP on a triangular grid, bottom-up is cleanest |
 | 7 | Maximal Square | Grid DP where `dp[r][c]` = side length of largest square ending at `(r,c)` |
 
+
 ---
 
 ## 10. String Matching DP (Edit Distance Family)
